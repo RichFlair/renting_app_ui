@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/leading_icon.dart';
 import 'widgets/location_chip.dart';
+import 'widgets/notification_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -13,6 +14,9 @@ class CustomAppBar extends StatelessWidget {
       foregroundColor: Colors.white,
       leading: const LeadingIcon(),
       title: const LocationChip(),
+      actions: const [
+        NotificationIcon(),
+      ],
     );
   }
 }
