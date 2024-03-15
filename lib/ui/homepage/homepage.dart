@@ -13,6 +13,9 @@ class HomePage extends StatelessWidget {
         backgroundColor: const Color(0xff161418),
         title: const CustomAppBar(),
       ),
+      body: Center(
+        child: Text('body'),
+      ),
     );
   }
 }
