@@ -39,7 +39,7 @@ final List<Item> items = [
   ),
   Item(
     name: 'Utensils',
-    image: 'assets/utensil.png',
+    image: 'assets/utensils.png',
     backgroundColor: const Color(0xffFEC17A),
   ),
 ];

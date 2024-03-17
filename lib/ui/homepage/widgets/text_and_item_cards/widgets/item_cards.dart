@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '/data/dummy_data.dart';
+
 class ItemCards extends StatelessWidget {
   const ItemCards({
     super.key,
@@ -15,21 +17,34 @@ class ItemCards extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return Container(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.all(4),
               height: double.maxFinite,
               width: 90,
-              decoration: const BoxDecoration(
-                color: Colors.orange,
-                borderRadius: BorderRadius.all(
+              decoration: BoxDecoration(
+                color: items[index].backgroundColor,
+                borderRadius: const BorderRadius.all(
                   Radius.circular(25),
                 ),
               ),
-              child: Center(
-                child: Image.asset('assets/tent.png'),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    items[index].image,
+                    width: 50,
+                  ),
+                  Text(
+                    items[index].name,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             );
           },
-          itemCount: 5,
+          itemCount: items.length,
           separatorBuilder: (context, index) {
             return const SizedBox(
               width: 15,
