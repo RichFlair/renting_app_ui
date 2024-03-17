@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
         title: const CustomAppBar(),
       ),
       body: ListView(
-        children: [
+        children: const [
           TextAndItemCards(),
         ],
       ),
