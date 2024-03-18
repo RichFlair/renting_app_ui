@@ -9,9 +9,8 @@ class LeaseAgainContainer extends StatelessWidget {
     return Container(
       constraints: BoxConstraints(minHeight: screenHeight * 0.7),
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.horizontal(
-          left: Radius.circular(30),
-          right: Radius.circular(30),
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(30),
         ),
         color: Colors.white,
       ),
