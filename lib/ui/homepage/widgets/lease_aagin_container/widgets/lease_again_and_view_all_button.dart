@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_iconly/flutter_iconly.dart';
 
 class LeaseAgainTextAndViewAllButton extends StatelessWidget {
   const LeaseAgainTextAndViewAllButton({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(8),
+    return Padding(
+      padding: const EdgeInsets.all(32.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const Text('Lease Again'),
-          TextButton.icon(
-            onPressed: () {},
-            icon: const Icon(Icons.arrow_right),
-            label: const Text('View all'),
-          ),
+          GestureDetector(
+            onTap: () {},
+            child: const Row(
+              children: [
+                Text('View all'),
+                Icon(Icons.keyboard_arrow_right),
+              ],
+            ),
+          )
         ],
       ),
     );
