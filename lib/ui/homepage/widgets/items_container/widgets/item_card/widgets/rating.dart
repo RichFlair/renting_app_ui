@@ -13,11 +13,16 @@ class Rating extends StatelessWidget {
         children: [
           Icon(
             IconlyBold.star,
+            color: Color(0xff794AFF),
           ),
           SizedBox(
             width: 10,
           ),
-          Text('5.0'),
+          Text(
+            '5.0',
+            style: TextStyle(
+                color: Color(0xff794AFF), fontWeight: FontWeight.bold),
+          ),
         ],
       ),
     );
