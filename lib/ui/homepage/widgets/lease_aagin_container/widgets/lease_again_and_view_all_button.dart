@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
 
 class LeaseAgainTextAndViewAllButton extends StatelessWidget {
   const LeaseAgainTextAndViewAllButton({super.key});
