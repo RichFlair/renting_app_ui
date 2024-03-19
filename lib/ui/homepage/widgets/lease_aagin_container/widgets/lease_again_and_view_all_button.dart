@@ -11,13 +11,26 @@ class LeaseAgainTextAndViewAllButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text('Lease Again'),
+          Text(
+            'Lease Again',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
           GestureDetector(
             onTap: () {},
-            child: const Row(
+            child: Row(
               children: [
-                Text('View all'),
-                Icon(Icons.keyboard_arrow_right),
+                Text(
+                  'View all',
+                  style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        color: const Color(0xff794AFF),
+                      ),
+                ),
+                const Icon(
+                  Icons.keyboard_arrow_right,
+                  color: Color(0xff794AFF),
+                ),
               ],
             ),
           )
