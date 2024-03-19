@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:renting_app_ui/ui/homepage/widgets/lease_aagin_container/lease_aagin_container.dart';
+import 'package:renting_app_ui/ui/homepage/widgets/items_container/items_container.dart';
 
-import '/ui/homepage/widgets/text_and_item_cards/text_and_item_cards.dart';
+import 'widgets/text_and_category_cards/text_and_category_cards.dart';
 import 'widgets/custom_appbar/custom_appbar.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         children: const [
-          TextAndItemCards(),
+          TextAndCategoryCards(),
           SizedBox(height: 20),
           LeaseAgainContainer()
         ],

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '/data/dummy_data.dart';
 
-class ItemCards extends StatelessWidget {
-  const ItemCards({
+class CategoryCards extends StatelessWidget {
+  const CategoryCards({
     super.key,
   });
 

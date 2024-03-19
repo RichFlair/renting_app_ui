@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'widgets/headline_text.dart';
-import 'widgets/item_cards.dart';
+import 'widgets/category_cards.dart';
 
-class TextAndItemCards extends StatelessWidget {
-  const TextAndItemCards({super.key});
+class TextAndCategoryCards extends StatelessWidget {
+  const TextAndCategoryCards({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class TextAndItemCards extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeadlineText(),
-          ItemCards(),
+          CategoryCards(),
         ],
       ),
     );
