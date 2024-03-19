@@ -1,44 +1,44 @@
 import 'package:flutter/material.dart';
-import '../models/item_model.dart';
+import '../models/category_model.dart';
 
-final List<Item> items = [
-  Item(
+final List<Category> items = [
+  Category(
     name: 'Sports',
     image: 'assets/cycle.png',
     backgroundColor: const Color(0xffB4F8BA),
   ),
-  Item(
-    name: 'Treadmill',
+  Category(
+    name: 'Electronics',
     image: 'assets/fitness.png',
     backgroundColor: const Color(0xffD09DF7),
   ),
-  Item(
-    name: 'Screwdriver',
+  Category(
+    name: 'Tools',
     image: 'assets/screwdriver.png',
     backgroundColor: const Color(0xffFE94AA),
   ),
-  Item(
-    name: 'Fridge',
+  Category(
+    name: 'Home',
     image: 'assets/fridge.png',
     backgroundColor: const Color(0xffFEC17A),
   ),
-  Item(
-    name: 'Drill',
+  Category(
+    name: 'Construction',
     image: 'assets/drill.png',
     backgroundColor: const Color.fromARGB(255, 148, 254, 229),
   ),
-  Item(
-    name: 'Tablet',
+  Category(
+    name: 'Phones',
     image: 'assets/tablet.png',
     backgroundColor: const Color(0xffD09DF7),
   ),
-  Item(
-    name: 'Tent',
+  Category(
+    name: 'Camp',
     image: 'assets/tent.png',
     backgroundColor: const Color(0xffB4F8BA),
   ),
-  Item(
-    name: 'Utensils',
+  Category(
+    name: 'Kitchen',
     image: 'assets/utensils.png',
     backgroundColor: const Color(0xffFEC17A),
   ),

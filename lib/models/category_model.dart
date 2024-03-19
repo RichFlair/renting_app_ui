@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Item {
+class Category {
   final String name;
   final String image;
   final Color backgroundColor;
 
-  Item({
+  Category({
     required this.name,
     required this.image,
     required this.backgroundColor,
