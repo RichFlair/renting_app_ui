@@ -27,19 +27,19 @@ final List<Category> items = [
     image: 'assets/drill.png',
     backgroundColor: const Color.fromARGB(255, 148, 254, 229),
   ),
-  Category(
-    name: 'Phones',
-    image: 'assets/tablet.png',
-    backgroundColor: const Color(0xffD09DF7),
-  ),
-  Category(
-    name: 'Camp',
-    image: 'assets/tent.png',
-    backgroundColor: const Color(0xffB4F8BA),
-  ),
-  Category(
-    name: 'Kitchen',
-    image: 'assets/utensils.png',
-    backgroundColor: const Color(0xffFEC17A),
-  ),
+  // Category(
+  //   name: 'Phones',
+  //   image: 'assets/tablet.png',
+  //   backgroundColor: const Color(0xffD09DF7),
+  // ),
+  // Category(
+  //   name: 'Camp',
+  //   image: 'assets/tent.png',
+  //   backgroundColor: const Color(0xffB4F8BA),
+  // ),
+  // Category(
+  //   name: 'Kitchen',
+  //   image: 'assets/utensils.png',
+  //   backgroundColor: const Color(0xffFEC17A),
+  // ),
 ];

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:renting_app_ui/ui/homepage/widgets/items_container/items_container.dart';
+import 'package:renting_app_ui/ui/homepage/widgets/products_container/products_container.dart';
 
 import 'widgets/text_and_category_cards/text_and_category_cards.dart';
 import 'widgets/custom_appbar/custom_appbar.dart';
@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
         children: const [
           TextAndCategoryCards(),
           SizedBox(height: 20),
-          LeaseAgainContainer()
+          ProductsContainer()
         ],
       ),
     );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '/ui/homepage/widgets/items_container/widgets/item_card/widgets/rating.dart';
+import '/ui/homepage/widgets/products_container/widgets/product_card/widgets/rating.dart';
 
 class ItemCard extends StatelessWidget {
   const ItemCard({super.key});

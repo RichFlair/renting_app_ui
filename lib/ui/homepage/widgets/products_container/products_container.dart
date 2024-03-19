@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/item_card/item_card.dart';
-import '/ui/homepage/widgets/items_container/widgets/lease_again_and_view_all_button.dart';
+import 'widgets/product_card/product_card.dart';
+import '/ui/homepage/widgets/products_container/widgets/lease_again_and_view_all_button.dart';
 
-class LeaseAgainContainer extends StatelessWidget {
-  const LeaseAgainContainer({super.key});
+class ProductsContainer extends StatelessWidget {
+  const ProductsContainer({super.key});
 
   @override
   Widget build(BuildContext context) {
