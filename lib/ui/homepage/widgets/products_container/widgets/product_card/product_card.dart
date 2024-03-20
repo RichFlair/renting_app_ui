@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'widgets/product_image_card.dart';
 import 'widgets/product_name.dart';
-import 'widgets/rating.dart';
 import 'widgets/price.dart';
 
 class ItemCard extends StatelessWidget {
@@ -15,50 +16,20 @@ class ItemCard extends StatelessWidget {
         child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, builder) {
-              return SizedBox(
+              return const SizedBox(
                 width: 130,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      height: 130,
-                      width: 130,
-                      decoration: const BoxDecoration(
-                        color: Color(0xffF1EEF5),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(24),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Stack(
-                              children: [
-                                Image.asset('assets/tablet.png'),
-                                const Positioned(
-                                  right: 1,
-                                  child: Icon(
-                                    Icons.favorite,
-                                    color: Color(0xff794AFF),
-                                  ),
-                                )
-                              ],
-                            ),
-                            const Rating(),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
+                    ProductImageCard(),
+                    SizedBox(
                       height: 20,
                     ),
-                    const ProductName(),
-                    const SizedBox(
+                    ProductName(),
+                    SizedBox(
                       width: 20,
                     ),
-                    const Price(),
+                    Price(),
                   ],
                 ),
               );
