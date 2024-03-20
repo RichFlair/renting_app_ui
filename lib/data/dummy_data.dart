@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/category_model.dart';
+import '../models/product_model.dart';
 
-final List<Category> items = [
+final List<Category> category = [
   Category(
     name: 'Sports',
     image: 'assets/cycle.png',
@@ -42,4 +43,28 @@ final List<Category> items = [
   //   image: 'assets/utensils.png',
   //   backgroundColor: const Color(0xffFEC17A),
   // ),
+];
+
+final List<Product> product = [
+  Product(
+    name: 'Google Pixel Tablet',
+    image: 'assets/tablet.png',
+    price: 15.00,
+    isFavorite: false,
+    rating: 4.1,
+  ),
+  Product(
+    name: 'Base Camp 4- Person Tent',
+    image: 'assets/tent.png',
+    price: 5.00,
+    isFavorite: true,
+    rating: 4.9,
+  ),
+  Product(
+    name: 'Kitchen Spoon Set',
+    image: 'assets/utensils.png',
+    price: 4.00,
+    isFavorite: true,
+    rating: 3.8,
+  )
 ];

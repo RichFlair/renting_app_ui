@@ -21,7 +21,7 @@ class CategoryCards extends StatelessWidget {
               height: double.maxFinite,
               width: 90,
               decoration: BoxDecoration(
-                color: items[index].backgroundColor,
+                color: category[index].backgroundColor,
                 borderRadius: const BorderRadius.all(
                   Radius.circular(25),
                 ),
@@ -30,11 +30,11 @@ class CategoryCards extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
-                    items[index].image,
+                    category[index].image,
                     width: 50,
                   ),
                   Text(
-                    items[index].name,
+                    category[index].name,
                     style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
@@ -44,7 +44,7 @@ class CategoryCards extends StatelessWidget {
               ),
             );
           },
-          itemCount: items.length,
+          itemCount: category.length,
           separatorBuilder: (context, index) {
             return const SizedBox(
               width: 15,
