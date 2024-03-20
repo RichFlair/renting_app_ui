@@ -4,8 +4,8 @@ import 'widgets/product_image_card.dart';
 import 'widgets/product_name.dart';
 import 'widgets/price.dart';
 
-class ItemCard extends StatelessWidget {
-  const ItemCard({super.key});
+class ProductColumn extends StatelessWidget {
+  const ProductColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class ItemCard extends StatelessWidget {
                     ),
                     ProductName(),
                     SizedBox(
-                      width: 20,
+                      height: 10,
                     ),
                     Price(),
                   ],

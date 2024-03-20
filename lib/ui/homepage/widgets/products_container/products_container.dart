@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/product_card/product_card.dart';
+import 'widgets/product_column/products_column.dart';
 import '/ui/homepage/widgets/products_container/widgets/lease_again_and_view_all_button.dart';
 
 class ProductsContainer extends StatelessWidget {
@@ -20,7 +20,7 @@ class ProductsContainer extends StatelessWidget {
       child: const Column(
         children: [
           LeaseAgainTextAndViewAllButton(),
-          ItemCard(),
+          ProductColumn(),
         ],
       ),
     );
