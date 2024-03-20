@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 
 class ProductName extends StatelessWidget {
+  final String prodName;
+
   const ProductName({
     super.key,
+    required this.prodName,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Google Pixel Tablet',
-      style: Theme.of(context).textTheme.titleLarge!.copyWith(
-            fontWeight: FontWeight.bold,
-          ),
+      prodName,
+      style: const TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 20,
+      ),
     );
   }
 }

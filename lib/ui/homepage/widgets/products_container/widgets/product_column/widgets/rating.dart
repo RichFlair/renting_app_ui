@@ -2,25 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 
 class Rating extends StatelessWidget {
-  const Rating({super.key});
+  final double rating;
+
+  const Rating({
+    super.key,
+    required this.rating,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(4.0),
+    return Padding(
+      padding: const EdgeInsets.all(4.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Icon(
+          const Icon(
             IconlyBold.star,
             color: Color(0xff794AFF),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Text(
-            '5.0',
-            style: TextStyle(
+            '$rating',
+            style: const TextStyle(
                 color: Color(0xff794AFF), fontWeight: FontWeight.bold),
           ),
         ],

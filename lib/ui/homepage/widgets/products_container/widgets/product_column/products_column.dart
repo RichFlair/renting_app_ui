@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '/data/dummy_data.dart';
 import 'widgets/product_image_card.dart';
 import 'widgets/product_name.dart';
 import 'widgets/price.dart';
@@ -15,21 +16,26 @@ class ProductColumn extends StatelessWidget {
         height: 250,
         child: ListView.separated(
             scrollDirection: Axis.horizontal,
-            itemBuilder: (context, builder) {
-              return const SizedBox(
+            itemBuilder: (context, index) {
+              final prodItem = product[index];
+              return SizedBox(
                 width: 130,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    ProductImageCard(),
-                    SizedBox(
+                    ProductImageCard(
+                      prodImage: prodItem.image,
+                      ratings: prodItem.rating,
+                      isFavourite: prodItem.isFavorite,
+                    ),
+                    const SizedBox(
                       height: 20,
                     ),
-                    ProductName(),
-                    SizedBox(
+                    ProductName(prodName: prodItem.name),
+                    const SizedBox(
                       height: 10,
                     ),
-                    Price(),
+                    Price(prodPrice: prodItem.price),
                   ],
                 ),
               );
@@ -39,7 +45,7 @@ class ProductColumn extends StatelessWidget {
                 width: 20,
               );
             },
-            itemCount: 5),
+            itemCount: product.length),
       ),
     );
   }

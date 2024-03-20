@@ -14,7 +14,7 @@ final List<Category> category = [
     backgroundColor: const Color(0xffD09DF7),
   ),
   Category(
-    name: 'Tools',
+    name: 'Repairs',
     image: 'assets/screwdriver.png',
     backgroundColor: const Color(0xffFE94AA),
   ),
@@ -24,7 +24,7 @@ final List<Category> category = [
     backgroundColor: const Color(0xffFEC17A),
   ),
   Category(
-    name: 'Construction',
+    name: 'Tools',
     image: 'assets/drill.png',
     backgroundColor: const Color.fromARGB(255, 148, 254, 229),
   ),

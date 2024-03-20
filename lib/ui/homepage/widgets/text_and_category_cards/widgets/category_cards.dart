@@ -17,7 +17,7 @@ class CategoryCards extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return Container(
-              padding: const EdgeInsets.all(4),
+              padding: const EdgeInsets.all(8),
               height: double.maxFinite,
               width: 90,
               decoration: BoxDecoration(
@@ -29,14 +29,16 @@ class CategoryCards extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    category[index].image,
-                    width: 50,
+                  Expanded(
+                    child: Image.asset(
+                      category[index].image,
+                      width: 50,
+                    ),
                   ),
                   Text(
                     category[index].name,
                     style: const TextStyle(
-                      fontSize: 12,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

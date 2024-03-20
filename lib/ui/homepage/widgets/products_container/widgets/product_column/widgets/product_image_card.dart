@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 import 'rating.dart';
 
 class ProductImageCard extends StatelessWidget {
+  final String prodImage;
+  final bool isFavourite;
+  final double ratings;
   const ProductImageCard({
     super.key,
+    required this.prodImage,
+    required this.isFavourite,
+    required this.ratings,
   });
 
   @override
@@ -18,25 +24,33 @@ class ProductImageCard extends StatelessWidget {
           Radius.circular(24),
         ),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Stack(
-              children: [
-                Image.asset('assets/tablet.png'),
-                const Positioned(
-                  right: 1,
-                  child: Icon(
-                    Icons.favorite,
-                    color: Color(0xff794AFF),
-                  ),
-                )
-              ],
-            ),
-            const Rating(),
-          ],
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Expanded(
+                child: Stack(
+                  children: [
+                    Center(
+                      child: Image.asset(
+                        prodImage,
+                      ),
+                    ),
+                    const Positioned(
+                      right: 1,
+                      child: Icon(
+                        Icons.favorite,
+                        color: Color(0xff794AFF),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Rating(rating: ratings),
+            ],
+          ),
         ),
       ),
     );

@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 
 class Price extends StatelessWidget {
-  const Price({super.key});
+  final double prodPrice;
+
+  const Price({
+    super.key,
+    required this.prodPrice,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          '\$15.00',
+          '\$$prodPrice',
           style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                 fontWeight: FontWeight.bold,
               ),
