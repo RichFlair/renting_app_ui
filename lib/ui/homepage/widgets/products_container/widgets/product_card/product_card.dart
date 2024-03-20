@@ -14,53 +14,57 @@ class ItemCard extends StatelessWidget {
         child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, builder) {
-              return Column(
-                children: [
-                  Container(
-                    height: 130,
-                    width: 130,
-                    decoration: const BoxDecoration(
-                      color: Color(0xffF1EEF5),
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(24),
-                      ),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset('assets/tablet.png'),
-                              const Positioned(
-                                right: 1,
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: Color(0xff794AFF),
-                                ),
-                              )
-                            ],
-                          ),
-                          const Rating(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Google Pixel\n Tablet',
-                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          fontWeight: FontWeight.bold,
+              return SizedBox(
+                width: 130,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 130,
+                      width: 130,
+                      decoration: const BoxDecoration(
+                        color: Color(0xffF1EEF5),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(24),
                         ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
-                  const Price(),
-                ],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Stack(
+                              children: [
+                                Image.asset('assets/tablet.png'),
+                                const Positioned(
+                                  right: 1,
+                                  child: Icon(
+                                    Icons.favorite,
+                                    color: Color(0xff794AFF),
+                                  ),
+                                )
+                              ],
+                            ),
+                            const Rating(),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      'Google Pixel Tablet',
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    const Price(),
+                  ],
+                ),
               );
             },
             separatorBuilder: (context, index) {
