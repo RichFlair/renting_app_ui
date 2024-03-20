@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets/product_name.dart';
 import 'widgets/rating.dart';
 import 'widgets/price.dart';
 
@@ -53,12 +54,7 @@ class ItemCard extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      'Google Pixel Tablet',
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
+                    const ProductName(),
                     const SizedBox(
                       width: 20,
                     ),
