@@ -22,11 +22,12 @@ class AvailableNowProduct extends StatelessWidget {
         padding: EdgeInsets.all(16),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ImageContainer(),
-            Expanded(
-              child: DetailsColumn(),
-            ),
+            SizedBox(width: 10),
+            DetailsColumn(),
+            SizedBox(width: 10),
             Icon(
               Icons.favorite,
               color: Color(0xff794AFF),

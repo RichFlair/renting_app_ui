@@ -6,7 +6,7 @@ class AvailableNowText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Text(
         'Available now',
         style: Theme.of(context).textTheme.titleLarge!.copyWith(
