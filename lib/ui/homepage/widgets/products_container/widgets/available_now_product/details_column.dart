@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'sub_details_row.dart';
+
 class DetailsColumn extends StatelessWidget {
   const DetailsColumn({super.key});
 
@@ -8,6 +10,11 @@ class DetailsColumn extends StatelessWidget {
     return const Column(
       children: [
         Text('Craftsman Cordless Drill'),
+        SubDetailsRow(),
+        Icon(
+          Icons.favorite,
+          color: Color(0xff794AFF),
+        ),
       ],
     );
   }

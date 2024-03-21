@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:renting_app_ui/data/dummy_data.dart';
+import '../product_column/widgets/rating.dart';
+import '../product_column/widgets/price.dart';
 
 class SubDetailsRow extends StatelessWidget {
   const SubDetailsRow({super.key});
@@ -19,12 +23,15 @@ class Distance extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    final prod = product[3];
+    return Row(
       children: [
-        Icon(
+        const Icon(
           IconlyLight.location,
         ),
-        Text('4.0km')
+        const Text('4.0km'),
+        Price(prodPrice: prod.price),
+        Rating(rating: prod.rating)
       ],
     );
   }
