@@ -24,15 +24,22 @@ class Distance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final prod = product[3];
-    return Row(
-      children: [
-        const Icon(
-          IconlyLight.location,
-        ),
-        const Text('4.0km'),
-        Price(prodPrice: prod.price),
-        Rating(rating: prod.rating)
-      ],
+    return Expanded(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Row(
+            children: [
+              Icon(
+                IconlyBold.location,
+              ),
+              Text('4.0km'),
+            ],
+          ),
+          Price(prodPrice: prod.price),
+          Rating(rating: prod.rating)
+        ],
+      ),
     );
   }
 }

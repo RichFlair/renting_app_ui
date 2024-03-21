@@ -7,15 +7,21 @@ class DetailsColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Text('Craftsman Cordless Drill'),
-        SubDetailsRow(),
-        Icon(
-          Icons.favorite,
-          color: Color(0xff794AFF),
-        ),
-      ],
+    return const Expanded(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Text(
+            'Craftsman Cordless Drill',
+            style: TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SubDetailsRow(),
+        ],
+      ),
     );
   }
 }

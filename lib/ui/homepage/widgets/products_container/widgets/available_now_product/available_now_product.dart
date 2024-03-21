@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:renting_app_ui/ui/homepage/widgets/products_container/widgets/available_now_product/details_column.dart';
 
 import 'image_container.dart';
 
@@ -8,8 +9,9 @@ class AvailableNowProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 32),
+      margin: const EdgeInsets.symmetric(horizontal: 16),
       height: 100,
+      width: double.infinity,
       decoration: const BoxDecoration(
         color: Color(0xffF1EEF5),
         borderRadius: BorderRadius.all(
@@ -19,8 +21,16 @@ class AvailableNowProduct extends StatelessWidget {
       child: const Padding(
         padding: EdgeInsets.all(16),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ImageContainer(),
+            Expanded(
+              child: DetailsColumn(),
+            ),
+            Icon(
+              Icons.favorite,
+              color: Color(0xff794AFF),
+            ),
           ],
         ),
       ),
