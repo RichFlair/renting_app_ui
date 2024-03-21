@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/available_now_product.dart';
+import 'widgets/available_now_product/available_now_product.dart';
 import 'widgets/available_now_text.dart';
 import 'widgets/product_column/products_column.dart';
 import 'widgets/lease_again_and_view_all_button.dart';

@@ -26,7 +26,9 @@ class Rating extends StatelessWidget {
           Text(
             '$rating',
             style: const TextStyle(
-                color: Color(0xff794AFF), fontWeight: FontWeight.bold),
+              color: Color(0xff794AFF),
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ],
       ),

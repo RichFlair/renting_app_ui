@@ -66,5 +66,12 @@ final List<Product> product = [
     price: 4.00,
     isFavorite: true,
     rating: 3.8,
+  ),
+  Product(
+    name: 'Craftsman Cordless Drill',
+    image: 'assets/drill.png',
+    price: 5.00,
+    isFavorite: false,
+    rating: 4.9,
   )
 ];
