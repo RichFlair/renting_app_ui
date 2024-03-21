@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/available_now_text.dart';
 import 'widgets/product_column/products_column.dart';
 import '/ui/homepage/widgets/products_container/widgets/lease_again_and_view_all_button.dart';
 
@@ -18,9 +19,11 @@ class ProductsContainer extends StatelessWidget {
         color: Colors.white,
       ),
       child: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           LeaseAgainTextAndViewAllButton(),
           ProductColumn(),
+          AvailableNowText()
         ],
       ),
     );
