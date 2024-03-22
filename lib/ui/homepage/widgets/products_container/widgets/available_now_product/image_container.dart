@@ -16,9 +16,7 @@ class ImageContainer extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(6.0),
-        child: Expanded(
-          child: Image.asset('assets/drill.png'),
-        ),
+        child: Image.asset('assets/drill.png'),
       ),
     );
   }
