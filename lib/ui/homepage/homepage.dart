@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:renting_app_ui/ui/homepage/widgets/products_container/products_container.dart';
 
+import 'widgets/bottom_nav_bar.dart';
+import 'widgets/products_container/products_container.dart';
 import 'widgets/text_and_category_cards/text_and_category_cards.dart';
 import 'widgets/custom_appbar/custom_appbar.dart';
 
@@ -22,6 +23,7 @@ class HomePage extends StatelessWidget {
           ProductsContainer()
         ],
       ),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }
