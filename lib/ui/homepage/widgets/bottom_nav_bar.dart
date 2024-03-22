@@ -7,25 +7,30 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.game),
+          icon: Icon(IconlyLight.home),
           label: 'Game',
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.game),
+          icon: Icon(IconlyLight.heart),
           label: 'like',
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.game),
+          icon: Icon(
+            IconlyLight.plus,
+          ),
           label: 'add',
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.game),
+          icon: Icon(IconlyLight.chat),
           label: 'chat',
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.game),
+          icon: Icon(IconlyLight.profile),
           label: 'profile',
         ),
       ],
