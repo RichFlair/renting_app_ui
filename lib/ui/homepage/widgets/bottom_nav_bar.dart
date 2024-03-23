@@ -12,18 +12,12 @@ class BottomNavBar extends StatelessWidget {
       showUnselectedLabels: false,
       items: const [
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.home),
+          icon: Icon(IconlyLight.category),
           label: 'Game',
         ),
         BottomNavigationBarItem(
-          icon: Icon(IconlyLight.heart),
+          icon: Icon(Icons.favorite_border),
           label: 'like',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            IconlyLight.plus,
-          ),
-          label: 'add',
         ),
         BottomNavigationBarItem(
           icon: Icon(IconlyLight.chat),
