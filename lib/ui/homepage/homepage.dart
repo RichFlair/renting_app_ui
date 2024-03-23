@@ -24,6 +24,24 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: const BottomNavBar(),
+      floatingActionButton: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Theme.of(context).primaryColor.withOpacity(0.3),
+              spreadRadius: 3,
+            ),
+          ],
+        ),
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(
+            Icons.add,
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
