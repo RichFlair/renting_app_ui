@@ -30,11 +30,13 @@ class HomePage extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Theme.of(context).primaryColor.withOpacity(0.3),
-              spreadRadius: 3,
+              spreadRadius: 5,
             ),
           ],
         ),
         child: FloatingActionButton(
+          backgroundColor: Theme.of(context).colorScheme.primary,
+          foregroundColor: Theme.of(context).colorScheme.onPrimary,
           onPressed: () {},
           child: const Icon(
             Icons.add,
