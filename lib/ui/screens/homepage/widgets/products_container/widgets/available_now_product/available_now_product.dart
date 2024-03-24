@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:renting_app_ui/ui/homepage/widgets/products_container/widgets/available_now_product/details_column.dart';
+import 'package:renting_app_ui/ui/screens/homepage/widgets/products_container/widgets/available_now_product/details_column.dart';
 
 import 'image_container.dart';
 
