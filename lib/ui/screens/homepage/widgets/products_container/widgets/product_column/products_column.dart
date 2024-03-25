@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:renting_app_ui/ui/screens/product_details_page/product_details_screen.dart';
 
 import '/data/dummy_data.dart';
 import 'widgets/product_image_card.dart';
@@ -18,25 +19,33 @@ class ProductColumn extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               final prodItem = product[index];
-              return SizedBox(
-                width: 130,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    ProductImageCard(
-                      prodImage: prodItem.image,
-                      ratings: prodItem.rating,
-                      isFavourite: prodItem.isFavorite,
-                    ),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    ProductName(prodName: prodItem.name),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Price(prodPrice: prodItem.price),
-                  ],
+              return GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pushNamed(
+                    ProductDetailsScreen.routeName,
+                    arguments: prodItem,
+                  );
+                },
+                child: SizedBox(
+                  width: 130,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      ProductImageCard(
+                        prodImage: prodItem.image,
+                        ratings: prodItem.rating,
+                        isFavourite: prodItem.isFavorite,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      ProductName(prodName: prodItem.name),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Price(prodPrice: prodItem.price),
+                    ],
+                  ),
                 ),
               );
             },
