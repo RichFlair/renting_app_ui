@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../product_details_page/widgets/prod_details_image_card.dart';
 import '/models/product_model.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
@@ -43,7 +45,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         ],
       ),
       body: ListView(
-        children: const [],
+        children: [
+          ProdDetailsImageCard(imagePath: product.image),
+        ],
       ),
     );
   }

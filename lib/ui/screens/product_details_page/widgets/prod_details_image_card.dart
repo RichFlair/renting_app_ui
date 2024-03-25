@@ -11,16 +11,20 @@ class ProdDetailsImageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16),
+      height: 250,
+      margin: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.grey.shade200,
         borderRadius: const BorderRadius.all(
           Radius.circular(20),
         ),
       ),
-      child: Image(
-        image: AssetImage(
-          imagePath,
+      child: Expanded(
+        child: Image(
+          image: AssetImage(
+            imagePath,
+          ),
         ),
       ),
     );
