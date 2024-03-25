@@ -16,7 +16,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text(product.name),
+          child: Text(
+            product.name,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
         actions: [
           IconButton(
@@ -36,6 +41,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ),
           ),
         ],
+      ),
+      body: ListView(
+        children: const [],
       ),
     );
   }
