@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:renting_app_ui/ui/screens/product_details_page/product_details_screen.dart';
 
 import 'ui/screens/homepage/homepage.dart';
 
@@ -18,6 +19,11 @@ class MainApp extends StatelessWidget {
         seedColor: const Color(0xff794AFF),
       )),
       home: const HomePage(),
+      routes: {
+        ProductDetailsScreen.routeName: (context) {
+          return const ProductDetailsScreen();
+        },
+      },
     );
   }
 }
