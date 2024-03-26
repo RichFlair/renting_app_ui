@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../homepage/widgets/products_container/widgets/product_column/widgets/rating.dart';
-
 class SellersDetail extends StatelessWidget {
   const SellersDetail({super.key});
 
@@ -29,10 +27,54 @@ class SellersDetail extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
+              RatingsRow(),
             ],
           ),
         ],
       ),
+    );
+  }
+}
+
+class RatingsRow extends StatelessWidget {
+  const RatingsRow({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    const rating = 3.7;
+
+    Icon buildIcon(
+      Color color,
+    ) {
+      return Icon(
+        Icons.star,
+        color: color,
+      );
+    }
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        for (int i = 0; i < 5; ++i)
+          if (i < rating.floor())
+            buildIcon(
+              Theme.of(context).colorScheme.primary,
+            ),
+        for (int i = 0; i < (5 - rating.floor()); ++i)
+          buildIcon(
+            const Color(0xff656C75),
+          ),
+        const SizedBox(
+          width: 5,
+        ),
+        const Text(
+          "$rating",
+          style: TextStyle(
+            fontSize: 18,
+            color: Color(0xff656C75),
+          ),
+        ),
+      ],
     );
   }
 }
