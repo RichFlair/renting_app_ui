@@ -5,26 +5,28 @@ class ProdDetailsCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        CustomDot(),
-        SizedBox(
+        CustomDot(color: Theme.of(context).colorScheme.primary),
+        const SizedBox(
           width: 10,
         ),
-        CustomDot(),
-        SizedBox(
+        CustomDot(color: Colors.grey.shade400),
+        const SizedBox(
           width: 10,
         ),
-        CustomDot(),
+        CustomDot(color: Colors.grey.shade400),
       ],
     );
   }
 }
 
 class CustomDot extends StatelessWidget {
+  final Color color;
   const CustomDot({
     super.key,
+    required this.color,
   });
 
   @override
@@ -33,7 +35,7 @@ class CustomDot extends StatelessWidget {
       height: 10,
       width: 10,
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primary,
+        color: color,
         borderRadius: const BorderRadius.all(
           Radius.circular(
             10,
