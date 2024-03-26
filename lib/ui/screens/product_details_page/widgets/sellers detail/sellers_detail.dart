@@ -12,19 +12,23 @@ class SellersDetail extends StatelessWidget {
       child: const Row(
         children: [
           CircleAvatar(
+            radius: 25,
             backgroundImage: AssetImage('assets/profile_image.jpg'),
           ),
-          const SizedBox(
-            width: 10,
+          SizedBox(
+            width: 15,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text(
-                "Seller Name",
+                "Nadine's shop",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
               ),
-              Rating(rating: 4.7),
             ],
           ),
         ],
