@@ -21,7 +21,10 @@ class SetDateButton extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.calendar_month),
+              Icon(
+                Icons.calendar_month,
+                color: Theme.of(context).colorScheme.primary,
+              ),
               const SizedBox(width: 15),
               Text(
                 '4 days',
