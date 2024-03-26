@@ -7,7 +7,7 @@ class LeaseButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(16),
-      height: 65,
+      height: 70,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Color(0xff794AFF),

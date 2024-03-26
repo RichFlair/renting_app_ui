@@ -8,7 +8,7 @@ class SetDateButton extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 32),
       margin: const EdgeInsets.symmetric(horizontal: 16),
-      height: 65,
+      height: 70,
       width: double.infinity,
       decoration: const BoxDecoration(
         color: Color(0xffEADDFF),
