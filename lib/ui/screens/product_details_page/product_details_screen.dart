@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './widgets/prod_details_carousel.dart';
 import '../product_details_page/widgets/prod_details_image_card.dart';
 import '/models/product_model.dart';
 
@@ -47,6 +48,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       body: ListView(
         children: [
           ProdDetailsImageCard(imagePath: product.image),
+          const SizedBox(
+            height: 20,
+          ),
+          const ProdDetailsCarousel(),
         ],
       ),
     );
