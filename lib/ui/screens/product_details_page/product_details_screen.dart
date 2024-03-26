@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import './widgets/prod_details_carousel.dart';
 import '../product_details_page/widgets/prod_details_image_card.dart';
 import '/models/product_model.dart';
+import 'widgets/lease_button.dart';
 import 'widgets/sellers detail/sellers_detail.dart';
 import 'widgets/sellers_pricing.dart';
 import 'widgets/set_date_button.dart';
@@ -61,6 +62,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           const SellersDetail(),
           const SellersPricing(),
           const SetDateButton(),
+          const LeaseButton(),
         ],
       ),
     );
