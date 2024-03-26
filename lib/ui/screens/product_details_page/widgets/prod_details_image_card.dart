@@ -20,11 +20,9 @@ class ProdDetailsImageCard extends StatelessWidget {
           Radius.circular(20),
         ),
       ),
-      child: Expanded(
-        child: Image(
-          image: AssetImage(
-            imagePath,
-          ),
+      child: Image(
+        image: AssetImage(
+          imagePath,
         ),
       ),
     );
