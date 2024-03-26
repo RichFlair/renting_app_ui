@@ -53,7 +53,7 @@ class RatingsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const rating = 3.7;
+    const rating = 4.7;
 
     Icon buildIcon(
       Color color,

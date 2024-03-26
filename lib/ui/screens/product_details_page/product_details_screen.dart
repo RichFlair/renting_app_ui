@@ -51,7 +51,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       ),
       body: ListView(
         children: [
-          ProdDetailsImageCard(imagePath: product.image),
+          ProdDetailsImageCard(
+            imagePath: product.image,
+            rating: product.rating,
+          ),
           const SizedBox(
             height: 5,
           ),
