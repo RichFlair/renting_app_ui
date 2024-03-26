@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:renting_app_ui/ui/screens/product_details_page/widgets/sellers%20detail/sellers_detail.dart';
 
 import './widgets/prod_details_carousel.dart';
 import '../product_details_page/widgets/prod_details_image_card.dart';
@@ -52,6 +53,10 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             height: 5,
           ),
           const ProdDetailsCarousel(),
+          const SizedBox(
+            height: 20,
+          ),
+          const SellersDetail(),
         ],
       ),
     );
