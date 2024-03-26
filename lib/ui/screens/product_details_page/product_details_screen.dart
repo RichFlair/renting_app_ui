@@ -49,7 +49,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         children: [
           ProdDetailsImageCard(imagePath: product.image),
           const SizedBox(
-            height: 20,
+            height: 5,
           ),
           const ProdDetailsCarousel(),
         ],
