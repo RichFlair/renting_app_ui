@@ -26,9 +26,9 @@ class SetDateButton extends StatelessWidget {
               Text(
                 '4 days',
                 style: TextStyle(
-                  fontSize: 18,
-                  color: Theme.of(context).colorScheme.primary,
-                ),
+                    fontSize: 18,
+                    color: Theme.of(context).colorScheme.primary,
+                    fontWeight: FontWeight.bold),
               )
             ],
           ),
@@ -37,6 +37,7 @@ class SetDateButton extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               color: Theme.of(context).colorScheme.primary,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ],
