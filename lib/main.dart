@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:renting_app_ui/ui/screens/sellers_profile_screen/sellers_profile_screen.dart';
 
 import 'ui/screens/homepage/homepage.dart';
+import 'ui/screens/sellers_profile_screen/sellers_profile_screen.dart';
 import 'ui/screens/product_details_screen/product_details_screen.dart';
 
 void main() {

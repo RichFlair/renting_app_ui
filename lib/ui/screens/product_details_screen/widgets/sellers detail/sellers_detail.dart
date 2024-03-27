@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:renting_app_ui/ui/screens/sellers_profile_screen/sellers_profile_screen.dart';
 
 class SellersDetail extends StatelessWidget {
   const SellersDetail({super.key});
@@ -6,7 +7,9 @@ class SellersDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).pushNamed(SellersProfileScreen.routName);
+      },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 16),
         child: Row(

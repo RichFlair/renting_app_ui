@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:renting_app_ui/ui/screens/product_details_page/product_details_screen.dart';
 
+import '../../../../../product_details_screen/product_details_screen.dart';
 import '/data/dummy_data.dart';
 import 'widgets/product_image_card.dart';
 import 'widgets/product_name.dart';
