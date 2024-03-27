@@ -6,8 +6,12 @@ class SellersProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.black,
+    return Scaffold(
+      backgroundColor: const Color(0xff151617),
+      appBar: AppBar(
+        foregroundColor: Colors.white,
+        backgroundColor: const Color(0xff151617),
+      ),
     );
   }
 }
