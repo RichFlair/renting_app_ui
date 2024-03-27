@@ -5,44 +5,47 @@ class SellersDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16),
-      child: Row(
-        children: [
-          const CircleAvatar(
-            radius: 25,
-            backgroundImage: AssetImage('assets/profile_image.jpg'),
-          ),
-          const SizedBox(
-            width: 15,
-          ),
-          const Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Text(
-                  "Nadine's shop",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 16),
+        child: Row(
+          children: [
+            const CircleAvatar(
+              radius: 25,
+              backgroundImage: AssetImage('assets/profile_image.jpg'),
+            ),
+            const SizedBox(
+              width: 15,
+            ),
+            const Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "Nadine's shop",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
                   ),
-                ),
-                RatingsRow(),
-              ],
+                  RatingsRow(),
+                ],
+              ),
             ),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              color: Color(0xffF2EDFF),
-              shape: BoxShape.circle,
-            ),
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Icon(Icons.arrow_forward_ios),
-            ),
-          )
-        ],
+            Container(
+              decoration: const BoxDecoration(
+                color: Color(0xffF2EDFF),
+                shape: BoxShape.circle,
+              ),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Icon(Icons.arrow_forward_ios),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
