@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './widgets/prod_details_carousel.dart';
-import '../product_details_page/widgets/prod_details_image_card.dart';
+import '../product_details_screen/widgets/prod_details_image_card.dart';
 import '/models/product_model.dart';
 import 'widgets/lease_button.dart';
 import 'widgets/sellers detail/sellers_detail.dart';
