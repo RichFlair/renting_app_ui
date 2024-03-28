@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:renting_app_ui/ui/screens/homepage/widgets/products_container/widgets/product_column/widgets/rating.dart';
 
-class ProdDetailsImageCard extends StatelessWidget {
+class ProdDetailsImageCard extends StatefulWidget {
   final String imagePath;
   final double rating;
 
@@ -12,6 +12,11 @@ class ProdDetailsImageCard extends StatelessWidget {
     required this.rating,
   });
 
+  @override
+  State<ProdDetailsImageCard> createState() => _ProdDetailsImageCardState();
+}
+
+class _ProdDetailsImageCardState extends State<ProdDetailsImageCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +34,7 @@ class ProdDetailsImageCard extends StatelessWidget {
           Center(
             child: Image(
               image: AssetImage(
-                imagePath,
+                widget.imagePath,
               ),
             ),
           ),
@@ -93,7 +98,7 @@ class ProdDetailsImageCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 10),
-                Rating(rating: rating),
+                Rating(rating: widget.rating),
               ],
             ),
           )
