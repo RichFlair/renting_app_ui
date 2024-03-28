@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import './widgets/prod_details_carousel.dart';
 import '../product_details_screen/widgets/prod_details_image_card.dart';
 import '/models/product_model.dart';
 import 'widgets/lease_button.dart';
@@ -58,7 +57,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
           const SizedBox(
             height: 5,
           ),
-          const ProdDetailsCarousel(),
           const SizedBox(
             height: 20,
           ),
