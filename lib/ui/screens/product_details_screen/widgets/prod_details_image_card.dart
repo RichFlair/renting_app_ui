@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:renting_app_ui/ui/screens/homepage/widgets/products_container/widgets/product_column/widgets/rating.dart';
+
+import '../../homepage/widgets/products_container/widgets/product_column/widgets/rating.dart';
 
 class ProdDetailsImageCard extends StatefulWidget {
   final String imagePath;
