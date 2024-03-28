@@ -126,6 +126,10 @@ class _ProdDetailsImageCardState extends State<ProdDetailsImageCard> {
         AnimatedSmoothIndicator(
           activeIndex: activePageIndex,
           count: 3,
+          effect: const WormEffect(
+            dotHeight: 10,
+            dotWidth: 10,
+          ),
         )
       ],
     );
