@@ -23,99 +23,111 @@ class _ProdDetailsImageCardState extends State<ProdDetailsImageCard> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 250,
-      child: PageView.builder(
-        itemCount: 3,
-        itemBuilder: (context, index) {
-          return Container(
-            height: 250,
-            margin: const EdgeInsets.all(16),
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: Colors.grey.shade200,
-              borderRadius: const BorderRadius.all(
-                Radius.circular(20),
-              ),
-            ),
-            child: Stack(
-              children: [
-                Center(
-                  child: Image(
-                    image: AssetImage(
-                      widget.imagePath,
-                    ),
+    return Column(
+      children: [
+        SizedBox(
+          height: 250,
+          child: PageView.builder(
+            onPageChanged: (value) {
+              setState(() => activePageIndex = value);
+            },
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              return Container(
+                height: 250,
+                margin: const EdgeInsets.all(16),
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.grey.shade200,
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(20),
                   ),
                 ),
-                Positioned(
-                  bottom: 10,
-                  left: 15,
-                  child: Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(4),
-                        width: 100,
-                        height: 35,
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.primary,
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(15),
-                          ),
+                child: Stack(
+                  children: [
+                    Center(
+                      child: Image(
+                        image: AssetImage(
+                          widget.imagePath,
                         ),
-                        child: const Center(
-                          child: Row(
-                            children: [
-                              Icon(
-                                IconlyBold.location,
-                                color: Colors.white,
+                      ),
+                    ),
+                    Positioned(
+                      bottom: 10,
+                      left: 15,
+                      child: Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            width: 100,
+                            height: 35,
+                            decoration: BoxDecoration(
+                              color: Theme.of(context).colorScheme.primary,
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(15),
                               ),
-                              SizedBox(
-                                width: 10,
+                            ),
+                            child: const Center(
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    IconlyBold.location,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    '3.2 km',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                '3.2 km',
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            width: 100,
+                            height: 35,
+                            decoration: const BoxDecoration(
+                              color: Color(0xff2AB364),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(15),
+                              ),
+                            ),
+                            child: const Center(
+                              child: Text(
+                                'Available',
                                 style: TextStyle(
-                                  color: Colors.white,
                                   fontSize: 15,
+                                  color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Container(
-                        padding: const EdgeInsets.all(4),
-                        width: 100,
-                        height: 35,
-                        decoration: const BoxDecoration(
-                          color: Color(0xff2AB364),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(15),
-                          ),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            'Available',
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ),
+                          const SizedBox(width: 10),
+                          Rating(rating: widget.rating),
+                        ],
                       ),
-                      const SizedBox(width: 10),
-                      Rating(rating: widget.rating),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          );
-        },
-      ),
+                    )
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
+        const SizedBox(height: 10),
+        AnimatedSmoothIndicator(
+          activeIndex: activePageIndex,
+          count: 3,
+        )
+      ],
     );
   }
 }
