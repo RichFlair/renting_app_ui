@@ -54,12 +54,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             imagePath: product.image,
             rating: product.rating,
           ),
-          const SizedBox(
-            height: 5,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
+          const SizedBox(height: 5),
+          const SizedBox(height: 20),
           const SellersDetail(),
           const SellersPricing(),
           const SetDateButton(),
