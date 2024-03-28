@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../homepage/widgets/products_container/widgets/product_column/widgets/rating.dart';
 
